@@ -132,6 +132,7 @@ def solve_flow_on_graph(Gtilde, Pin, Pout, fluid_viscosity=8.9e-4):
     
     print "Updating graph edges with flow solution..."
 
+    #saumik ~ writing pressures at nodes
     with open("graph_pressures.out", "w") as f1:
          for v in nx.nodes(Gtilde):
              Gtilde.nodes[v]['pressure'] = Phat[v]
