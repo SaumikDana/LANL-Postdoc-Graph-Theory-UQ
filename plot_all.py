@@ -77,17 +77,17 @@ for i in range(1,101):
        labelcum="Cumulative number of exiting particles"
     
     if i == 1:
-    	ax[0].plot(bx1, pdf1, markergraph, markersize=4, label="Graph")
-    	ax[1].plot(bx1, cdf1, markergraph, markersize=4, label="Graph") 
+      ax[0].plot(bx1, pdf1, markergraph, markersize=4, label="Graph")
+      ax[1].plot(bx1, cdf1, markergraph, markersize=4, label="Graph") 
     
-    	ax[0].plot(bx2, pdf2, markerdfn, markersize=4, label="DFN")
-    	ax[1].plot(bx2, cdf2, markerdfn, markersize=4, label="DFN")
+      ax[0].plot(bx2, pdf2, markerdfn, markersize=4, label="DFN")
+      ax[1].plot(bx2, cdf2, markerdfn, markersize=4, label="DFN")
     else:
-    	ax[0].plot(bx1, pdf1, markergraph, markersize=4)
-    	ax[1].plot(bx1, cdf1, markergraph, markersize=4)
+      ax[0].plot(bx1, pdf1, markergraph, markersize=4)
+      ax[1].plot(bx1, cdf1, markergraph, markersize=4)
     
-    	ax[0].plot(bx2, pdf2, markerdfn, markersize=4)
-    	ax[1].plot(bx2, cdf2, markerdfn, markersize=4)
+      ax[0].plot(bx2, pdf2, markerdfn, markersize=4)
+      ax[1].plot(bx2, cdf2, markerdfn, markersize=4)
 
 ax[0].set_xscale('log') #saumik
 ax[0].set_yscale('log') #saumik
