@@ -153,10 +153,10 @@ class Particle():
         """
         #saumik
         if self.starting_inlet:
-	    Inlet = [v for v in nx.nodes(Gtilde) if Gtilde.nodes[v]['inletflag']]
+            Inlet = [v for v in nx.nodes(Gtilde) if Gtilde.nodes[v]['inletflag']]
             curr_v = numpy.random.choice(Inlet)
         else:
-	    Inlet = [v for v in nx.nodes(Gtilde)]
+            Inlet = [v for v in nx.nodes(Gtilde)]
             curr_v = numpy.random.choice(Inlet,p=starting_prob)
         
         while True:
@@ -285,12 +285,12 @@ def run_graph_transport(self, Gtilde, nparticles, partime_file=None, frac_id_fil
     nbrs_dict = create_neighbour_list(Gtilde)
     starting_prob = create_probability_list(Gtilde) #saumik
     
-    print "Creating downstream neighbour list..."
+    print("Creating downstream neighbour list...") 
 
     Inlet = [v for v in nx.nodes(Gtilde)]
 
     pfailcount = 0
-    print "Starting particle tracking..."
+    print("Starting particle tracking...") 
 
     for i in range(0, nparticles):
         
@@ -304,15 +304,15 @@ def run_graph_transport(self, Gtilde, nparticles, partime_file=None, frac_id_fil
         else:
             pfailcount += 1
 
-    print "Particle tracking complete"
+    print("Particle tracking complete") 
     
     if pfailcount == 0:
     
-        print "All particles exited"
+        print("All particles exited") 
     
     else:
     
-        print "Out of {} particles, {} particles did not exit".format(nparticles, pfailcount)
+        print("Out of {} particles, {} particles did not exit".format(nparticles, pfailcount)) 
 
 
     return

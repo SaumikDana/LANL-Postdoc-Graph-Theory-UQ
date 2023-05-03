@@ -126,11 +126,11 @@ def solve_flow_on_graph(Gtilde, Pin, Pout, fluid_viscosity=8.9e-4):
         D[v, v] = 1.0
     L = D - A # automatically converts to csr when returning L
 
-    print "Solving sparse system..."
+    print("Solving sparse system...")
 
     Phat = scipy.sparse.linalg.spsolve(L, rhs)
     
-    print "Updating graph edges with flow solution..."
+    print("Updating graph edges with flow solution...") 
 
     #saumik ~ writing pressures at nodes
     with open("graph_pressures.out", "w") as f1:
@@ -146,7 +146,7 @@ def solve_flow_on_graph(Gtilde, Pin, Pout, fluid_viscosity=8.9e-4):
         else:
             Gtilde.edges[u, v]['flux'] = 0
     
-    print "Graph flow complete"
+    print("Graph flow complete") 
     return Gtilde
 
 def run_graph_flow(self, inflow, outflow, Pin, Pout, well_problem=False, fluid_viscosity=8.9e-4):
