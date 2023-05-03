@@ -1,8 +1,8 @@
+from errno import ERANGE
 import networkx as nx
 import numpy as np
 import numpy.random 
 import sys
-import graph_flow 
 
 def create_neighbour_list(Gtilde):
     """ Create a list of downstream neighbour vertices for every vertex on NetworkX graph obtained after running graph_flow
@@ -230,7 +230,7 @@ class Particle():
             data1 = [key for key in self.frac_seq if isinstance(key, dict) is False]
             n = len(data1)
             with open(frac_id_file, "a") as f2:
-                for i in xrange(0, 3*n):
+                for i in ERANGE(0, 3*n):
                     if i < n:    
                         f2.write("{:d}  ".format(data1[i]))
                     elif n-1 < i < 2*n:
