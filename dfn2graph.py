@@ -8,6 +8,7 @@ from networkx.algorithms.flow.preflowpush import *
 from networkx.readwrite import json_graph
 import matplotlib.pylab as plt
 from itertools import islice
+import sys
 
 def create_graph(self, graph_type, inflow, outflow, well_problem=False):
     #saumik added well_problem flag:True when we solve the well problem for O & G
