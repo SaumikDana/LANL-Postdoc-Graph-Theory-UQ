@@ -68,3 +68,9 @@ LANL-Postdoc-Graph-Theory-UQ/
 - **Key Functions**:
   - Parses data, calculates averages, standard deviations, and standard errors
   - Generates plots
+
+## Output
+
+![montage_graph](https://github.com/SaumikDana/LANL-Postdoc-Graph-Theory-UQ/assets/9474631/d3f48642-1721-4c32-b434-29d6e3a1a962)
+
+![montage_graph_results](https://github.com/SaumikDana/LANL-Postdoc-Graph-Theory-UQ/assets/9474631/6dc78177-872b-4512-b4be-5beae921d4dd)
